@@ -1,0 +1,27 @@
+@charset "UTF_8";
+
+main {
+    display: flex;
+    margin: auto;
+}
+
+article {
+    border-right: none;
+    width: 100%;
+    padding: 10px;
+}
+
+main > article > .textos #texto0 {
+    margin-bottom: 20px;
+}
+
+main p {
+    text-indent: 10px;
+}
+
+iframe {
+    height: 300px;
+    margin-bottom: 10px;
+    width: 400px;
+}
+

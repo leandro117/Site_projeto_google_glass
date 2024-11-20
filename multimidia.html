@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>especificacoes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/especificacoes.css">
+    <script src="js/script.js"></script>
+    <style>
+        @font-face {
+            font-family: "bubblegum";
+            src: url('../fonts/bubblegum-sans-regular.otf');
+        }
+        img {
+            margin: auto;
+            display: block;
+        }
+
+        #text {
+            margin: 20px;
+            font-family: "bubblegum", Arial, Helvetica, sans-serif;
+            font-size: 1.4rem;
+        }
+        video {
+            position: absolute;
+            top: 570px;
+            left: 300px;
+            width: 34%;
+        }
+        audio {
+            position: absolute;
+            left: 800px;
+            top: 960px;
+        }
+        .textos {
+            margin-bottom: 20px;
+        }
+        @media only screen and (max-width: 1350px) {
+            #img1 {
+                display: none;
+            }
+            video {
+                position: static;
+                margin: 20px auto;
+                display: block;
+                width: 100%;
+            }   
+            audio {
+                display: block;
+                position: static;
+                margin: 20px auto;
+                width: 100%;
+            }
+            #container {
+                background-color: rgba(158, 158, 158, 0.63);
+                width: 70%;
+                margin: auto;
+                text-align: center;
+                padding: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+        <nav>
+            <ul>
+                <li onmouseover="mudaImagem('imagens/home.png')" onmouseout="mudaImagem('imagens/multimidia.png')"><a href="index.html">HOME</a></li>
+                <li onmouseover="mudaImagem('imagens/especificacoes.png')" onmouseout="mudaImagem('imagens/multimidia.png')"><a href="especificacoes.html">ESPECIFICAÇÕES</a></li>
+                <li onmouseover="mudaImagem('imagens/fotos.png')" onmouseout="mudaImagem('imagens/multimidia.png')"><a href="especificacoes.html">FOTOS</a></li>
+                <li onmouseover="mudaImagem('imagens/multimidia.png')"><a href="multimidia.html">MULTIMÍDIA</a></li>
+                <li onmouseover="mudaImagem('imagens/contato.png')" onmouseout="mudaImagem('imagens/multimidia.png')"><a href="contato.html">FALE CONOSCO</a></li>
+            </ul>
+        </nav>
+        <div id="google-glass-logo"></div>
+        <img id="google-glass-img" src="imagens/multimidia.png" alt="glass-oculos-preto-peq">
+    </header>
+
+    <main>
+        <article>
+            <div class="textos">
+                <h3>Glass > Multimídia</h3>
+                <h2 id="sub-titulo1">Sons e Vídeos</h2>
+                <h3 id="sub-titulo0">por Leandro Jonathan</h3>
+                <p id="texto0">Atualizado em 23/Abril/2013</p>
+                <div id="container">
+                    <p id="text">Áudio e Vídeo</p>
+                    <img id="img1" src="imagens/radio-tv.png" alt="radio-tv.png">
+                    <video src="media/getting-started.mp4" poster="imagens/video-mini03.jpg" controls></video>
+                    <audio src="media/2009-lovers-carvings-bibio.mp3" controls></audio>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p> &copy; copyright 2013 - by Leandro Jonathan</p>
+        <div>
+            <p id="p-footer"><a href="#">Facebook|</a></p>
+            <p id="p-footer2"><a href="">Twitter</a></p>
+        </div>
+    </footer>
+</body>
+</html>

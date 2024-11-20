@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>especificacoes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/especificacoes.css">
+    <script src="js/script.js"></script>
+    <style>
+        .galeria {
+            background-position: 50% 50%;
+            background-size: 400px 400px;
+            background-repeat: no-repeat;
+            background-color: white;
+        }
+        #galeria1{
+            background-image: url("imagens/galeria-01.jpg");
+        }
+        #galeria2{
+            background-image: url("imagens/galeria-02.jpg");
+        }
+        #galeria3{
+            background-image: url("imagens/galeria-03.jpg");
+        }
+        #galeria4{
+            background-image: url("imagens/galeria-04.jpg");
+        }
+        #galeria5{
+            background-image: url("imagens/galeria-05.jpg");
+        }
+        #galeria6{
+            background-image: url("imagens/galeria-06.jpg");
+        }
+        .separador {
+            display:flex;
+            justify-content: center;
+            margin: auto;
+        }
+        .zoom {
+            border: 3px solid rgb(228, 228, 228);
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+            padding: 50px;
+            background-color: green;
+            transition: transform .2s;
+            width: 250px;
+            height: 250px;
+            transition: all 0.4s ease-in;
+        }
+        .zoom:hover {
+            -ms-transform: scale(1.5); /* IE 9 */
+            -webkit-transform: scale(1.5); /* Safari 3-8 */
+            transform: scale(1.5);
+            background-position: 0px;
+            background-size: 300px 300px;
+        }
+        #sep1 {
+            margin-top: 40px;
+        }
+        #sep2 {
+            margin-bottom: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+        <nav>
+            <ul>
+                <li onmouseover="mudaImagem('imagens/home.png')" onmouseout="mudaImagem('imagens/fotos.png')"><a href="index.html">HOME</a></li>
+                <li onmouseover="mudaImagem('imagens/especificacoes.png')" onmouseout="mudaImagem('imagens/fotos.png')"><a href="especificacoes.html">ESPECIFICAÇÕES</a></li>
+                <li onmouseover="mudaImagem('imagens/fotos.png')"><a href="fotos.html">FOTOS</a></li>
+                <li onmouseover="mudaImagem('imagens/multimidia.png')" onmouseout="mudaImagem('imagens/fotos.png')"><a href="multimidia.html">MULTIMÍDIA</a></li>
+                <li onmouseover="mudaImagem('imagens/contato.png')" onmouseout="mudaImagem('imagens/fotos.png')"><a href="contato.html">FALE CONOSCO</a></li>
+            </ul>
+        </nav>
+        <div id="google-glass-logo"></div>
+        <img id="google-glass-img" src="imagens/fotos.png" alt="glass-oculos-preto-peq">
+    </header>
+
+    <main>
+        <article>
+            <div class="textos">
+                <h3>Glass > Fotos</h3>
+                <h2 id="sub-titulo1">Raio-X no Google Glass</h2>
+                <h3 id="sub-titulo0">por Leandro Jonathan</h3>
+                <p id="texto0">Atualizado em 23/Abril/2013</p>
+                <p>Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.</p>
+                <div class="galeria-fotos">
+                    <div class="separador" id="sep1">
+                        <div class="zoom galeria" id="galeria1"></div>
+                        <div class="zoom galeria" id="galeria2"></div>
+                        <div class="zoom galeria" id="galeria3"></div>
+                    </div>
+                    <div class="separador" id="sep2">
+                        <div class="zoom galeria" id="galeria4"></div>
+                        <div class="zoom galeria" id="galeria5"></div>
+                        <div class="zoom galeria" id="galeria6"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p> &copy; copyright 2013 - by Leandro Jonathan</p>
+        <div>
+            <p id="p-footer"><a href="#">Facebook|</a></p>
+            <p id="p-footer2"><a href="#">Twitter</a></p>
+        </div>
+    </footer>
+</body>
+</html>

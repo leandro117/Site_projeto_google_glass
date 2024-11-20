@@ -1,0 +1,343 @@
+@charset "UTF_8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "bubblegum";
+    src: url('../fonts/bubblegum-sans-regular.otf');
+}
+
+@font-face {
+    font-family: "computer-font";
+    src: url('../fonts/computer-font.ttf');
+}
+
+:root {
+    --cor1: rgba(158, 158, 158, 0.63);
+    --cor2: rgb(85, 85, 85);
+}
+
+html{
+    background-color: var(--cor1);
+}
+
+body {
+    width:90%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.562);
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*header*/
+
+header {
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    border-bottom: 3px solid gray;
+    width: 98%;
+    margin: auto;
+}
+
+header h1{
+    font-family: "bubblegum", Arial, Helvetica, sans-serif;
+    color: gray;
+    font-size: 3rem;
+    padding-top: 40px;
+    font-weight: normal;
+    text-shadow: 2px 2px black;
+}
+
+header h2{
+    color: var(--cor1);
+}
+
+header ul {
+    display: flex;
+    justify-content: end;
+    top: -129px;
+    right: 50px;
+    position: relative;
+}
+
+header li {
+    list-style: none;
+    margin: 5px;
+    background-color: var(--cor1);
+    padding: 10px;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+header li:hover {
+    background-color: grey;
+    transition: all 0.6s ease-in;
+}
+
+#google-glass-logo {
+    background-image: url('../imagens/glass-logo-peq.jpg');
+    background-repeat: no-repeat;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: -30px;
+}
+
+#google-glass-img{
+    position: absolute;
+    left: 74%;
+    top: 20%;
+}
+
+/*main*/
+
+main {
+    display: flex;
+    margin: auto;
+}
+
+/*article*/
+article {
+    border-right: 3px solid gray;
+    width: 50%;
+    padding: 10px;
+}
+
+.textos {
+    margin-top: 10px;
+}
+
+.sub-txt {
+    color: var(--cor1);
+}
+
+#sub-titulo1 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: var(--cor2);
+    font-family: "bubblegum", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+main > article > .textos h3 {
+    color: gray;
+}
+
+main > article > .textos #sub-titulo0 {
+    text-indent: 10px;
+    margin-bottom: 20px;
+}
+
+main > article > .textos #texto0 {
+    text-align: end;
+    color: var(--cor2);
+}
+
+article > .textos > section h2 {
+    background-color: var(--cor1);
+    color: var(--cor2);
+    margin-bottom: 20px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+#google-glass-link {
+    text-decoration: none;
+    color: gray;
+}
+
+figure {
+    position: relative;
+}
+
+#glass-quadro-homem-mulher {
+    margin: auto;
+    width: 99%;
+    margin-top: 20px;
+}
+
+figcaption {
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.452);
+    top: 20px;
+    width: 99%;
+    height: 92%;
+    opacity: 0;
+}
+
+figcaption:hover {
+    opacity: 1;
+}
+
+#figcaption-h3 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#figcaption-p {
+    margin-top: 10px;
+}
+
+#figcaption-h3, #figcaption-p {
+    color: white;
+}
+
+article > .textos > section p {
+    text-indent: 40px;
+    text-align: justify;
+    background: none;
+}
+
+#video1 {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+}
+
+table {
+    height: 200px;
+    width: 70%;
+    margin: auto;
+    border: 1px solid black;
+    background-color: gray;
+}
+
+td {
+    border: 1px solid black;
+    background-color: rgb(189, 189, 189);
+    font-weight: bold;
+}
+
+th {
+    color: white;
+}
+
+#caption1 {
+    color: gray;
+}
+
+#caption2 {
+    text-align: end;
+    font-size: 13px;
+}
+
+
+/*aside*/
+aside {
+    width: 50%;
+    padding: 10px;
+}
+
+#sub-titulo2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-family: "bubblegum", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: var(--cor2);
+}
+
+#aside-conf {
+    background-color: var(--cor1);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.664);
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+    padding: 30px 20px 20px 20px;
+    margin-top: 20px;
+}
+
+#h2-aside {
+    margin: 20px 0;
+    background-color: gray;
+    color: white;
+    padding: 5px;
+
+}
+
+aside p {
+    text-indent: 40px;
+}
+
+#video2 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*footer*/
+footer {
+    width: 98%;
+    border-top: 3px solid gray;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor2);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+}
+
+#p-footer {
+    border-right: 1px solid black;
+}
+
+#p-footer {
+    padding-right: 10px;
+}
+
+#p-footer2 {
+    padding-left: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    header li {
+        margin: 2px;
+        padding: 4px;
+        font-size: 1rem;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+    
+    header ul {
+        top: 0%;
+        right: 8%;
+        position: absolute;
+    }
+
+    header h2{
+        margin-bottom: 50px;
+    }
+    
+    #google-glass-img{
+        position: absolute;
+        width: 20%;
+        left: 74%;
+        top: 20%;
+    }
+}

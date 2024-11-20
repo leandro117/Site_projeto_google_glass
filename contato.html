@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contato</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/especificacoes.css">
+    <script src="js/script.js"></script>
+    <style>
+        fieldset {
+            width: 40%;
+            margin: auto;
+            padding: 20px;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        }
+        #campo1 {
+            background-image: url("imagens/icone-contato.png");
+        }
+        #campo2 {
+            background-image: url("imagens/icone-endereco.png");
+        }
+        #campo3 {
+            background-image: url("imagens/icone-mensagem.png");
+        }
+        #campo4 {
+            background-image: url("imagens/icone-pagamento.png");
+        }
+        #campSexo {
+            margin: 20px;
+            width: 50%;
+        }
+        label {
+            display: block;
+            padding: 5px;
+        }
+        input {
+            margin: 5px;
+            background-color: rgba(128, 128, 128, 0.253);
+        }
+        legend {
+            color: gray;
+            font-weight: bold;
+        }
+        #Txtarea {
+            margin: -5px 0px 0px 5px;
+            width: 60%;
+            height: 80px;
+            background-color: rgba(128, 128, 128, 0.253);
+        }
+        #imgBtn {
+            display: block;
+            margin: 20px auto 0 auto;
+        }
+        @media only screen and (max-width: 800px) {
+            fieldset {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+        <nav>
+            <ul>
+                <li onmouseover="mudaImagem('imagens/home.png')" onmouseout="mudaImagem('imagens/contato.png')"><a href="index.html">HOME</a></li>
+                <li onmouseover="mudaImagem('imagens/especificacoes.png')" onmouseout="mudaImagem('imagens/contato.png')"><a href="especificacoes.html">ESPECIFICAÇÕES</a></li>
+                <li onmouseover="mudaImagem('imagens/fotos.png')" onmouseout="mudaImagem('imagens/contato.png')"><a href="fotos.html">FOTOS</a></li>
+                <li onmouseover="mudaImagem('imagens/multimidia.png')" onmouseout="mudaImagem('imagens/contato.png')"><a href="multimidia.html">MULTIMÍDIA</a></li>
+                <li onmouseover="mudaImagem('imagens/contato.png')"><a href="contato.html">FALE CONOSCO</a></li>
+            </ul>
+        </nav>
+        <div id="google-glass-logo"></div>
+        <img id="google-glass-img" src="imagens/contato.png" alt="glass-oculos-preto-peq">
+    </header>
+
+    <main>
+        <article>
+            <div class="textos">
+                <h3>Fale Conosco > Contato</h3>
+                <h2 id="sub-titulo1">Formulário de Contato</h2>
+                <h3 id="sub-titulo0">por Leandro Jonathan</h3>
+                <p id="texto0">Atualizado em 23/Abril/2013</p>
+                <form action="#" oninput="mudarvalor();">
+                    <fieldset id="campo1">
+                        <legend>Identificação do Usuário</legend>
+                        <label for="Tname">Nome  <input type="text" name="name" id="Tname" placeholder="Nome completo" size="20" maxlength="30"></label>
+                        <label for="Tsenha">Senha <input type="password" name="senha" id="Tsenha" placeholder="8 digitos" size="8" maxlength="8"></label>
+                        <label for="Temail">Email <input type="email" name="email" id="Temail" placeholder="Separe por virgulas" size="20" maxlength="40"></label>
+                        <fieldset id="campSexo">
+                            <label for="Rmasc">Masculino<input type="radio" name="sexo" id="Rmasc"></label>
+                            <label for="Rfem">Feminino<input type="radio" name="sexo" id="Rfem"></label>
+                        </fieldset>
+                        <label for="Ddata">Data de nascimento<input type="date" name="date" id="Ddata"></label>
+                    </fieldset>
+                    
+                    <fieldset id="campo2">
+                        <legend>Endereço do Usuário</legend>
+                        <label for="Tendereco">Logadouro  <input type="text" name="endereco" id="Tendereco" placeholder="rua, avn, trav..." size="13" maxlength="80"></label>
+                        <label for="Tnumero">Número <input type="number" name="numero" id="Tnumero" min="0" max="9999" maxlength="9999" size="10"></label>
+                        <label for="Lestados"> Estado
+                            <select name="estados" id="Lestados">
+                                <optgroup label="Região Sudeste">
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RJ">São Paulo</option>
+                                    <option value="RJ">Minas Gerais</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="RJ">Paraná</option>
+                                    <option value="RJ">Santa Catarina</option>
+                                    <option value="RJ">Rio Grande do Sul</option>
+                                </optgroup>
+                            </select>
+                        </label>
+                        <label for="Dcidade">Cidade<input type="text" name="cidade" id="Dcidade" placeholder="Digite a cidade"></label>
+                    </fieldset>
+
+                    <fieldset id="campo3">
+                        <legend>Mensagem do Usuário</legend>
+                        <label for="Tname">Grau de urgência: Min<input type="range" name="name" id="Tname" placeholder="Nome completo" step="2" min="0" max="10">Max</label>
+                        <label for="Txtarea">Mensagem: </label>
+                        <textarea name="txtarea" id="Txtarea" placeholder="Digite um texto"></textarea>
+                    </fieldset>
+
+                    <fieldset id="campo4">
+                        <legend>Quero um Google Glass</legend>
+                        <label for="Ccheckbox"><input type="checkbox" name="checkbox" id="Ccheckbox" placeholder="Nome completo"> Gostaria de adquirir um Google Glass quando disponível</label>
+                        <label for="Ccor">Cor: <input type="color" name="cor" id="Ccor"></label>
+                        <label for="Qnumber">Quantidade: <input type="number" name="qnumber" id="iqtd" min="1" max="5" size="5"></label>
+                        <label for="Txtpreco">Preço Total: R$<input type="text" name="txtpreco" id="ipreco" readonly size="10"></label>
+                    </fieldset>
+                </form>
+                <a href="#"><img id="imgBtn" src="imagens/botao-enviar.png" alt="botao-enviar.png"></a>
+            </div>
+            
+        </article>
+    </main>
+    <footer>
+        <p> &copy; copyright 2013 - by Leandro Jonathan</p>
+        <div>
+            <p id="p-footer"><a href="#">Facebook|</a></p>
+            <p id="p-footer2"><a href="#">Twitter</a></p>
+        </div>
+    </footer>
+</body>
+</html>

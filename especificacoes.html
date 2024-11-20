@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>especificacoes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/especificacoes.css">
+    <script src="js/script.js"></script>
+    <style>
+        #container {
+            display: none;
+        }
+        @media only screen and (max-width: 800px) {
+            #img1 {
+                width: 80%;
+                display: block;
+                margin: auto;
+                margin-top: 20px;
+            }
+            iframe {
+                display: none;
+            }
+            #container {
+                display: block;
+                background-color: rgba(158, 158, 158, 0.63);
+                width: 70%;
+                margin: 30px auto;
+                padding: 20px;
+            }
+            #container a{
+                display: block;
+                text-decoration: none;
+                margin: 10px;
+                text-align: center;
+                color: black;
+            }
+            #container a:hover {
+                color: rgba(158, 158, 158, 0.63);
+                transition: all 0.6s ease-in;
+            }
+            #container h3{
+                font-size: 1.2;
+                color: black;
+                text-align: justify;
+                padding-bottom: 10px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+        <nav>
+            <ul>
+                <li onmouseover="mudaImagem('imagens/home.png')" onmouseout="mudaImagem('imagens/especificacoes.png')"><a href="index.html">HOME</a></li>
+                <li onmouseover="mudaImagem('imagens/especificacoes.png')"><a href="especificacoes.html">ESPECIFICAÇÕES</a></li>
+                <li onmouseover="mudaImagem('imagens/fotos.png')" onmouseout="mudaImagem('imagens/especificacoes.png')"><a href="fotos.html">FOTOS</a></li>
+                <li onmouseover="mudaImagem('imagens/multimidia.png')" onmouseout="mudaImagem('imagens/especificacoes.png')"><a href="multimidia.html">MULTIMÍDIA</a></li>
+                <li onmouseover="mudaImagem('imagens/contato.png')" onmouseout="mudaImagem('imagens/especificacoes.png')"><a href="contato.html">FALE CONOSCO</a></li>
+            </ul>
+        </nav>
+        <div id="google-glass-logo"></div>
+        <img id="google-glass-img" src="imagens/especificacoes.png" alt="glass-oculos-preto-peq">
+    </header>
+
+    <main>
+        <article>
+            <div class="textos">
+                <h3>Glass > Especificações</h3>
+                <h2 id="sub-titulo1">Raio-X no Google Glass</h2>
+                <h3 id="sub-titulo0">por Leandro Jonathan</h3>
+                <p id="texto0">Atualizado em 23/Abril/2013</p>
+                <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações. (Se estiver vendo este site por celular ou tablet acesse os links abaixo)</p>
+                <img id="img1" src="imagens/glass-esquema-marcado.jpg" usemap="#glass" alt="glass-esquema-marcado">
+                <map name="glass">
+                    <area shape="poly" coords="183,220, 264,209, 266,242, 185,253" href="textosIframe.html#tela" target="iframe-spac">
+                    <area shape="circle" coords="158,244, 12" href="textosIframe.html#camera" target="iframe-spac"/>
+                    <area shape="poly" coords="28,148, 82,213, 81,249, 25,165" href="textosIframe.html#sensores" target="iframe-spac"/> 
+                    <area shape="circle" coords="76,50 12" href="textosIframe.html#bateria" target="iframe-spac"/> 
+                </map>
+                <div id="container">
+                    <h3>Clique abaixo para mais informações: </h3>
+                    <a onclick="clicou()" href="textosIframe.html#tela" target="iframe-spac">Tela</a>
+                    <a onclick="clicou()" href="textosIframe.html#camera" target="iframe-spac">Câmera</a>
+                    <a onclick="clicou()" href="textosIframe.html#sensores" target="iframe-spac">Sensores</a>
+                    <a onclick="clicou()" href="textosIframe.html#bateria" target="iframe-spac">Bateria</a>
+                </div>
+                <iframe id="iframeSpac" src="textosIframe.html" frameborder="0" scrolling="no" name="iframe-spac"></iframe>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p> &copy; copyright 2013 - by Leandro Jonathan</p>
+        <div>
+            <p id="p-footer"><a href="#">Facebook</a></p>
+            <p id="p-footer2"><a href="#">Twitter</a></p>
+        </div>
+    </footer>
+</body>
+</html>
