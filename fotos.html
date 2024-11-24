@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="css/especificacoes.css">
     <script src="js/script.js"></script>
     <style>
+        .figcaption-gal {
+            font-weight: bold;
+            font-size: 0.7rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.568);
+            position: absolute;
+            top: 85%;
+            padding: 5px;
+            left: 10%;
+            opacity: 0;
+            text-indent: 0;
+            font-size: 0.8rem;
+        }
         .galeria {
             background-position: 50% 50%;
             background-size: 400px 400px;
@@ -54,6 +67,10 @@
             transform: scale(1.5);
             background-position: 0px;
             background-size: 250px 250px;
+            opacity: 1;
+        }
+        .zoom:hover p {
+            opacity: 1;
         }
         #sep1 {
             margin-top: 40px;
@@ -61,6 +78,7 @@
         #sep2 {
             margin-bottom: 40px;
         }
+        
         @media only screen and (max-width: 400px) {
             .zoom {
                 display: block;
@@ -73,6 +91,9 @@
             }
             .zoom:hover {
                 background-size: 200px 200px;
+            }
+            .figcaption-gal {
+                font-size: 0.5rem;
             }
         }
         
@@ -105,14 +126,26 @@
                 <p>Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.</p>
                 <div class="galeria-fotos">
                     <div class="separador" id="sep1">
-                        <div class="zoom galeria" id="galeria1"></div>
-                        <div class="zoom galeria" id="galeria2"></div>
-                        <div class="zoom galeria" id="galeria3"></div>
+                            <div class="zoom galeria" id="galeria1" >
+                                <p class="figcaption-gal">Agenda e lembretes</p>
+                            </div>
+                        <div class="zoom galeria" id="galeria2">
+                                <p class="figcaption-gal">Sergey Brin usando o Glass</p>
+                        </div>
+                        <div class="zoom galeria" id="galeria3">
+                                <p class="figcaption-gal">Leve e compacto</p>
+                        </div>
                     </div>
                     <div class="separador" id="sep2">
-                        <div class="zoom galeria" id="galeria4"></div>
-                        <div class="zoom galeria" id="galeria5"></div>
-                        <div class="zoom galeria" id="galeria6"></div>
+                        <div class="zoom galeria" id="galeria4">
+                                <p class="figcaption-gal">Sensação de uma tela de 50"</p>
+                        </div>
+                        <div class="zoom galeria" id="galeria5">
+                                <p class="figcaption-gal">Vários tipos de lente</p>
+                        </div>
+                        <div class="zoom galeria" id="galeria6">
+                                <p class="figcaption-gal">Informações importantes</p>
+                        </div>
                     </div>
                 </div>
             </div>
