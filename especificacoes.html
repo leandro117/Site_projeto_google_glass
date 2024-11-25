@@ -21,7 +21,6 @@
             iframe {
                 width: 75%;
                 display: none;
-                height: 320px;
                 margin: auto;
             }
             #container {
@@ -49,6 +48,15 @@
                 padding-bottom: 10px;
             }
 
+        }
+        @media only screen and (max-width: 400px) {
+            iframe {
+                height: 400px;
+                width: 100%;
+            }
+            #container {
+                width: 100%;
+            }
         }
     </style>
 </head>
